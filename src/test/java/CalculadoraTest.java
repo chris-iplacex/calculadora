@@ -22,8 +22,7 @@ public class CalculadoraTest {
     }
     @Test
     public void dividir_por_0() {
-        assertEquals(0, calc.dividir(10, 0));
+        assertThrows(ArithmeticException.class, () -> calc.dividir(1, 0));
     }
-
 }
 
