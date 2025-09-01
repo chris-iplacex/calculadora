@@ -17,8 +17,13 @@ public class CalculadoraTest {
         assertEquals(42, calc.multiplicar(7, 6));
     }
     @Test
-    public void dividir_y_por_cero() {
+    public void dividir_ok() {
         assertEquals(4, calc.dividir(20, 5));
     }
+    @Test
+    public void dividir_por_0() {
+        assertEquals(0, calc.dividir(10, 0));
+    }
+
 }
 
