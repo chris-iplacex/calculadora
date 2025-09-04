@@ -1,25 +1,25 @@
-# language: es
-Característica: Operaciones de calculadora
-  Para asegurar calidad y evitar regresiones,
-  como usuario quiero que la calculadora ejecute operaciones básicas de forma confiable.
+# language: en
+Feature: Calculator operations
+  In order to ensure quality and avoid regressions,
+  As a user I want the calculator to reliably perform basic operations
 
-  Antecedentes:
-    Dado que tengo una calculadora
+  Background:
+    Given I have a calculator
 
-  Escenario: Sumar dos números
-    Cuando sumo 2 y 3
-    Entonces el resultado debe ser 5
+  Scenario: Add two numbers
+    When I add 2 and 3
+    Then the result should be 5
 
-  Esquema del escenario: Dividir números correctamente
-    Cuando divido <a> por <b>
-    Entonces el resultado debe ser <resultado>
+  Scenario Outline: Divide numbers correctly
+    When I divide <a> by <b>
+    Then the result should be <result>
 
-    Ejemplos:
-      | a  | b | resultado |
-      | 20 | 5 | 4         |
-      | 42 | 7 | 6         |
+    Examples:
+      | a  | b | result |
+      | 20 | 5 | 4      |
+      | 42 | 7 | 6      |
 
-  Escenario: División por cero
-    Cuando divido 1 por 0
-    Entonces se produce un error de tipo "ArithmeticException"
+  Scenario: Division by zero
+    When I divide 1 by 0
+    Then an error of type "ArithmeticException" should occur
 
