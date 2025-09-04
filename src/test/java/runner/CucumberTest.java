@@ -12,3 +12,4 @@ import io.cucumber.junit.platform.engine.Constants;
         value = "pretty, html:target/cucumber-reports.html, json:target/cucumber.json, junit:target/cucumber.xml"
 )
 public class CucumberTest {}
+
